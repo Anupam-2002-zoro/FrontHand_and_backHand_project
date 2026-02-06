@@ -1,9 +1,27 @@
+import { Route, Routes} from "react-router-dom";
+import Mainlayout from "./Layout/Mainlayout";
+import Home from "./Components/Home";
+import Contect from "./Components/Contect";
+import Login from "./Components/Login";
+import Signup from "./Components/Signup";
+import Poshak from "./Components/Poshak";
+import About from "./Components/About";
+
 export default function App() {
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-100">
-      <h1 className="text-4xl font-bold text-blue-600">
-        Tailwind React me chal raha hai 🚀
-      </h1>
-    </div>
+    <>
+     <Routes>
+       <Route path="/" element={<Mainlayout/>}>
+         <Route path="/" element={<Home/>}/>
+         <Route path="/about" element={<About/>}/>
+         <Route path="/poshak" element={<Poshak/>}/>
+         <Route path="contect" element={<Contect/>}/>
+         
+       </Route>
+
+       <Route path="/login" element={<Login/>}/>
+       <Route path="/signup" element={<Signup/>}/>
+     </Routes>
+    </>
   );
 }
