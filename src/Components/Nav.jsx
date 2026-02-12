@@ -7,7 +7,7 @@ function Nav() {
  
   return (
     <div 
-      className=" shadow-md h-20 flex items-center justify-between px-8 py-4 mx-auto"
+      className=" shadow-md h-24 flex items-center justify-between px-8 py-4 mx-auto"
     >
       <div className="w-20 h-20 ">
         <img src={Logo} alt="logo" className="rounded-full" />
@@ -41,7 +41,7 @@ function Nav() {
       <div>
         <Link
           to={"/login"}
-          className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-zinc-700 transition duration-800 font-medium"
+          className="bg-gradient-to-r from-pink-400 to-blue-500 text-white px-6 py-2 rounded-lg hover:bg-zinc-700 transition duration-800 font-medium"
         >
           Login
         </Link>
