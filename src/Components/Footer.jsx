@@ -27,8 +27,8 @@ export default function Footer() {
           {/* Customer Care */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Customer Care</h3>
-            <p className="text-gray-200 hover:text-yellow-300">paramparaclothstore@gmail.com</p>
-            <p className="text-gray-200 mt-1 hover:text-yellow-300">+91 98285 53884</p>
+            <p className="text-gray-200 hover:text-yellow-300 cursor-pointer">paramparaclothstore@gmail.com</p>
+            <p className="text-gray-200 mt-1 hover:text-yellow-300 cursor-pointer">+91 98285 53884</p>
           </div>
 
           {/* Help */}
@@ -71,16 +71,12 @@ export default function Footer() {
 
           {/* Left Info */}
           <div className="text-gray-200 text-sm space-y-2">
-            <p className="hover:text-yellow-300"><strong>Shop:</strong> Parampara Cloth Store</p>
-            <p className="hover:text-yellow-300"><strong>Owner:</strong> Virendra Singh</p>
-            <p className="hover:text-yellow-300"><strong>Registration:</strong> 081-43-789</p>
-            <p className="hover:text-yellow-300"><strong>Email:</strong> paramparaclothstore@gmail.com</p>
-            <p className="hover:text-yellow-300"><strong>Customer Service:</strong> +91 98285 53884</p>
-            <p className="mt-3">
-               
-              Monday - Sunday: 9am - 8pm 
-             
-            </p>
+            <p className="hover:text-yellow-300 cursor-pointer"><strong>Shop:</strong> Parampara Cloth Store</p>
+            <p className="hover:text-yellow-300 cursor-pointer"><strong>Owner:</strong> Virendra Singh</p>
+            <p className="hover:text-yellow-300 cursor-pointer"><strong>Registration:</strong> 081-43-789</p>
+            <p className="hover:text-yellow-300 cursor-pointer"><strong>Email:</strong> paramparaclothstore@gmail.com</p>
+            <p className="hover:text-yellow-300 cursor-pointer"><strong>Customer Service:</strong> +91 98285 53884</p>
+            <p className="mt-3 hover:text-yellow-300 cursor-pointer"> Monday - Sunday: 9am - 8pm </p>
           </div>
 
           {/* Social + Brand */}
