@@ -1,3 +1,4 @@
+import React from 'react'
 import {
   list,
   Half_Privar_Poshak,
@@ -5,36 +6,18 @@ import {
   velvetSuits,
   rajputiOdhani,
 } from "../Add";
-import POshakilstitemTRansport from "./POshakilstitemTRansport";
-import { useEffect, useState } from "react";
-
-function Poshak() {
-  const [dressmap, Setdressmap] = useState([]);
-  const [selectedId, setSelectedId] = useState(0);
-
-  useEffect(() => {
-    if (selectedId == 1) Setdressmap(list);
-        if (selectedId == 2) Setdressmap(Half_Privar_Poshak);
-    if (selectedId == 3) Setdressmap(cottonSuits);
-    if (selectedId == 4) Setdressmap(velvetSuits);
-    if (selectedId == 5) Setdressmap(rajputiOdhani);
-
-  }, [selectedId]);
-
-  useEffect(() => {
-    const id = localStorage.getItem("poshakId");
-    if (id) {
-      setSelectedId(Number(id));
-    }
-  }, []);
- console.log(dressmap)
-  console.log(selectedId == 0, selectedId);
+const POshakilstitemTRansport = () => {
+  const arrlist = [
+      ...list,
+      ...Half_Privar_Poshak,
+      ...cottonSuits,
+      ...velvetSuits,
+      ...rajputiOdhani,
+    ];
   return (
-    <>
-    {selectedId == 0 ? <POshakilstitemTRansport /> : <></>}
       <div className="flex flex-wrap justify-center items-center min-h-screen bg-gradient-to-r from-indigo-900 via-blue-800 to-pink-700 p-10 gap-8">
       
-      {dressmap.map((item, index) => (
+      {arrlist.map((item, index) => (
         <div
           key={index}
           className="w-[280px] rounded-2xl overflow-hidden shadow-2xl group relative cursor-pointer transition-all duration-500 hover:-translate-y-6 hover:shadow-pink-500/50"
@@ -70,8 +53,7 @@ function Poshak() {
         </div>
       ))}
     </div>
-    </>
-  );
+  )
 }
 
-export default Poshak;
+export default POshakilstitemTRansport
